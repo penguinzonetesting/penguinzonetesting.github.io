@@ -22,8 +22,8 @@
 }
 
 .penguin-zone-logo:hover {
-	filter: drop-shadow(4px 4px 0 white) drop-shadow(-3px -3px 0 white) drop-shadow(-3px 4px 0 white) drop-shadow(4px -3px 0 white);
-	-webkit-filter: drop-shadow(4px 4px 0 white) drop-shadow(-3px -3px 0 white) drop-shadow(-3px 4px 0 white) drop-shadow(4px -3px 0 white);
+	filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white) drop-shadow(-3px 3px 0 white) drop-shadow(3px -3px 0 white);
+	-webkit-filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white) drop-shadow(-3px 3px 0 white) drop-shadow(3px -3px 0 white);
 }
 
 .vertical-column {
@@ -67,9 +67,7 @@
 	border-radius: 30px;
 	padding: 4px;
 	background: linear-gradient(rgb(0, 106, 182), rgb(0, 44, 82));
-	-webkit-mask:
-			linear-gradient(#fff 0 0) content-box,
-			linear-gradient(#fff 0 0);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 	-webkit-mask-composite: xor;
 	mask-composite: exclude;
 }
@@ -114,6 +112,6 @@
 }
 
 .play:hover {
-	filter: drop-shadow(3px 3px 0 white) drop-shadow(-2px -2px 0 white) drop-shadow(-2px 3px 0 white) drop-shadow(3px -2px 0 white);
-	-webkit-filter: drop-shadow(3px 3px 0 white) drop-shadow(-2px -2px 0 white) drop-shadow(-2px 3px 0 white) drop-shadow(3px -2px 0 white);
+	filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px -2px 0 white) drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white);
+	-webkit-filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px -2px 0 white) drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white);
 }
