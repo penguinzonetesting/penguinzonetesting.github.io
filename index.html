@@ -7,14 +7,14 @@
 	<meta content="Home | Penguin Zone" property="og:title" />
 	<meta content="Welcome to Penguin Zone; a free virtual world based on Club Penguin that allows you to meet new friends online in a moderated, safe environment!" property="og:description" />
 	<meta content="/" property="og:url" />
-	<meta content="images/penguin_zone_logo.png" property="og:image" />
+	<meta content="/images/penguin_zone_logo.png" property="og:image" />
 	<link rel="stylesheet" href="/styles/header.css">
 	<script type="text/javascript" src="/scripts/header.js"></script>
 </head>
 <body>
 <header class="header">
 	<div class="background-gradient">
-		<a href="/"><img src="images/penguin_zone_logo.png" alt="Penguin Zone Logo" class="penguin-zone-logo"></a>
+		<a href="/"><img src="/images/penguin_zone_logo.png" alt="Penguin Zone Logo" class="penguin-zone-logo"></a>
 	</div>
 	<div class="vertical-column">
 		<div class="navbar">
@@ -34,5 +34,12 @@
 		<a href="https://play.penguinzone.ca/" class="play">PLAY NOW!</a>
 	</div>
 </header>
+<div id="scene">
+	<object width="100%" height="475px" data="/home_scenes/scene_default.swf">
+		<param name="movie" value="/home_scenes/scene_default.swf">
+		<param name="quality" value="high">
+		<embed src="/home_scenes/scene_default.swf" width="100%" height="475px" type="application/x-shockwave-player">
+	</object>
+</div>
 </body>
 </html>
