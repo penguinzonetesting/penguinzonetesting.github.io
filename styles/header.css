@@ -1,4 +1,14 @@
-﻿body {
+﻿@font-face {
+	font-family: 'CCFaceFrontW00-Italic';
+	src: url("../fonts/CCFaceFront W00 Italic.ttf");
+}
+
+@font-face {
+	font-family: 'Burbank Small Medium';
+	src: url('../fonts/BurbankSmall-Bold.otf');
+}
+
+body {
 	padding: 0;
 	margin: 0;
 }
@@ -8,7 +18,7 @@
 	border-bottom: rgb(0, 44, 82) 4px solid;
 	display: flex;
 	justify-content: space-between;
-	font-family: "Burbank Small", serif;
+	font-family: "Burbank Small Medium";
 	color: white;
 }
 
@@ -103,7 +113,7 @@
 	padding: 1rem 2rem;
 	color: white;
 	text-decoration: none;
-	font-family: "CCFaceFrontW00-Italic", serif;
+	font-family: "CCFaceFrontW00-Italic";
 	font-size: 1.5rem;
 	filter: drop-shadow(3px 3px 0 rgb(0, 209, 225));
 	-webkit-filter: drop-shadow(3px 3px 0 rgb(0, 209, 225));
