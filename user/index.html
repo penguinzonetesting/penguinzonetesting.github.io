@@ -10,14 +10,14 @@
   <script>
     window.onload = function() {
       // Get the query parameter from the URL
-    function getPlayerID() {
+    function getPenguinID() {
       const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get('player-id');
+      return urlParams.get('penguin-id');
     }
 
     // Display the player ID on the webpage
       const penguinIdElement = document.getElementById('penguin-id');
-      penguinIdElement.textContent = getPlayerID();
+      penguinIdElement.textContent = getPenguinID();
     };
   </script>
 </head>
