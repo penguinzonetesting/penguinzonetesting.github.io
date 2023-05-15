@@ -67,8 +67,8 @@ body {
 
 .navbar a:hover {
 	color: rgb(128, 227, 255);
-	border: rgb(0, 56, 105) 4px solid;
-	background: rgb(0, 106, 182);
+	border: rgb(8, 122, 204) 4px solid;
+	background: rgb(8, 122, 204, 20%);
 }
 
 .rotating-text-div {
