@@ -25,6 +25,7 @@
 	max-width: 1311px;
 	right: 50%;
 	z-index: 1;
+	pointer-events: none;
 }
 
 #penguin_zone {
