@@ -47,6 +47,7 @@
 .secondary-navigation a {
 	text-decoration: none;
 	color: white;
+	transition: color 0.4s;
 }
 
 .secondary-navigation a:hover {

@@ -59,9 +59,10 @@ body {
 .navbar a {
 	padding: 1rem;
 	border-radius: 30px;
-	border: transparent 4px solid;
 	text-decoration: none;
 	color: white;
+	border: transparent 4px solid;
+	transition: color 0.4s, border 0.4s, background 0.4s;
 }
 
 .navbar a:hover {
