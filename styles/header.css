@@ -56,6 +56,20 @@ body {
 	text-shadow: 2px 2px 0 black;
 }
 
+.navbar a {
+	padding: 1rem;
+	border-radius: 30px;
+	border: transparent 4px solid;
+	text-decoration: none;
+	color: white;
+}
+
+.navbar a:hover {
+	color: rgb(128, 227, 255);
+	border: rgb(0, 56, 105) 4px solid;
+	background: rgb(0, 106, 182);
+}
+
 .rotating-text-div {
 	background: rgb(0, 56, 105);
 	align-items: center;

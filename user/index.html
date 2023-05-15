@@ -4,28 +4,32 @@
   <meta charset="UTF-8">
   <title>Penguin ID | Penguin Zone</title>
   <meta id="title-meta" content="Penguin ID | Penguin Zone" property="og:title" />
-  <meta id="description-meta" content="The penguins id is: " property="og:description" />
+  <meta id="description-meta" content="Penguin ID" property="og:description" />
   <meta content="/" property="og:url" />
   <meta content="/images/penguin_zone_logo.png" property="og:image" />
   <script>
     window.onload = function() {
       // Get the query parameter from the URL
+    function getPlayerID() {
       const urlParams = new URLSearchParams(window.location.search);
-      const penguinId = urlParams.get('penguin-id');
+      return urlParams.get('player-id');
+    }
 
-      const titleMeta = document.getElementById('title-meta');
-      titleMeta.content = `Penguin ${penguinId} | Penguin Zone`;
-
-      const descriptionMeta = document.getElementById('description-meta');
-      descriptionMeta.content = `The penguin's ID is: ${penguinId}`;
-
-      // Display the player ID on the webpage
+    // Display the player ID on the webpage
       const penguinIdElement = document.getElementById('penguin-id');
-      penguinIdElement.textContent = penguinId;
+      penguinIdElement.textContent = getPlayerID();
     };
   </script>
 </head>
 <body>
+<object type="application/x-shockwave-flash" id="game" name="game" data="../swfs/penguin.swf" width="100%" height="98%">
+  <param name="menu" value="false">
+  <param name="allowScriptAccess" value="always">
+  <param name="flashvars" value="lang=en">
+  <a href="https://get.adobe.com/flashplayer/">
+    <img id="noflash" src="/images/need-flash-player.gif" alt="Get Adobe Flash player" title="Get Adobe Flash player">
+  </a>
+</object>
 <h1>Penguin ID: <span id="penguin-id"></span></h1>
 </body>
 </html>
