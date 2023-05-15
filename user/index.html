@@ -10,26 +10,16 @@
   <script>
     window.onload = function() {
       // Get the query parameter from the URL
-    function getPenguinID() {
       const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get('penguin-id');
-    }
+      const penguinId = urlParams.get('penguin-id');
 
-    // Display the player ID on the webpage
+      // Display the player ID on the webpage
       const penguinIdElement = document.getElementById('penguin-id');
-      penguinIdElement.textContent = getPenguinID();
+      penguinIdElement.textContent = penguinId;
     };
   </script>
 </head>
 <body>
-<object type="application/x-shockwave-flash" id="game" name="game" data="../swfs/penguin.swf" width="100%" height="98%">
-  <param name="menu" value="false">
-  <param name="allowScriptAccess" value="always">
-  <param name="flashvars" value="lang=en">
-  <a href="https://get.adobe.com/flashplayer/">
-    <img id="noflash" src="/images/need-flash-player.gif" alt="Get Adobe Flash player" title="Get Adobe Flash player">
-  </a>
-</object>
 <h1>Penguin ID: <span id="penguin-id"></span></h1>
 </body>
 </html>
