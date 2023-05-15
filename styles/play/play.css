@@ -1,21 +1,51 @@
 ﻿body {
-	 background-color: rgb(1, 134, 177);
-	 display: flex;
-	 flex-direction: column;
-	 height: 100vh;
- }
-
-#scene {
-	display: flex;
-	width: 100%;
-	height: 100%;
-	justify-content: center;
-	align-items: center;
 	background-color: rgb(1, 134, 177);
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 }
 
-#scene object {
-	width: 75%;
-	height: 98%;
-	background-color: rgb(1, 134, 177);
+#border_outer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+#border {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: rgb(0, 44, 82) 10px solid;
+	box-sizing: border-box;
+	min-height: 828px;
+	max-height: 828px;
+	min-width: 1311px;
+	max-width: 1311px;
+	right: 50%;
+	z-index: 1;
+}
+
+#penguin_zone {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	position: relative;
+}
+
+#play_container {
+	margin: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+object {
+	position: relative;
+	min-height: 828px;
+	max-height: 828px;
+	min-width: 1311px;
+	max-width: 1311px;
 }

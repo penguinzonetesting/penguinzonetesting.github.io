@@ -38,19 +38,20 @@ body {
 	-webkit-filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white) drop-shadow(-3px 3px 0 white) drop-shadow(3px -3px 0 white);
 }
 
-.navbar {
+.left-navbar {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	padding-right: 50rem;
 }
 
-.navbar > p {
-	padding-left: 20px;
-	padding-right: 20px;
+.left-navbar > p {
+	padding-left: 5px;
+	padding-right: 5px;
 	text-shadow: 2px 2px 0 black;
 }
 
-.navbar a {
+.left-navbar a {
 	padding: 1rem;
 	border-radius: 30px;
 	text-decoration: none;
@@ -59,7 +60,35 @@ body {
 	transition: color 0.4s, border 0.4s, background 0.4s;
 }
 
-.navbar a:hover {
+.left-navbar a:hover {
+	color: rgb(128, 227, 255);
+	border: rgb(8, 122, 204) 4px solid;
+	background: rgb(8, 122, 204, 20%);
+}
+
+.right-navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-right: 3rem;
+}
+
+.right-navbar > p {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-shadow: 2px 2px 0 black;
+}
+
+.right-navbar a {
+	padding: 1rem;
+	border-radius: 30px;
+	text-decoration: none;
+	color: white;
+	border: transparent 4px solid;
+	transition: color 0.4s, border 0.4s, background 0.4s;
+}
+
+.right-navbar a:hover {
 	color: rgb(128, 227, 255);
 	border: rgb(8, 122, 204) 4px solid;
 	background: rgb(8, 122, 204, 20%);

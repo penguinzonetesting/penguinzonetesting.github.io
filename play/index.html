@@ -5,7 +5,6 @@
 	<title>Play | Penguin Zone</title>
 	<link rel="stylesheet" href="../styles/play/header.css">
 	<link rel="stylesheet" href="../styles/play/play.css">
-	<link rel="stylesheet" href="../styles/play/game.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
@@ -14,7 +13,7 @@
 		<a href="/"><img src="../images/penguin_zone_logo.png" alt="Penguin Zone Logo" class="penguin-zone-logo"></a>
 	</div>
 	<div class="header-vertical-column">
-		<div class="navbar">
+		<div class="left-navbar">
 			<p><a href="/">Home</a></p>
 			<p><a href="https://patreon.com/penguinzone">Support Us</a></p>
 			<p><a href="/download">Download</a></p>
@@ -22,28 +21,34 @@
 		</div>
 	</div>
 	<div class="header-vertical-column">
-		<div class="navbar">
-			<label>Screen Size:
-				<select id="myselect">
-					<option value="?size=small-screen">Small Screen</option>
-					<option value="?size=medium-screen">Medium Screen</option>
-					<option value="?size=big-screen">Big Screen</option>
-				</select>
-			</label>
+		<div class="right-navbar">
+<!--			<label>Screen Size:-->
+<!--				<select id="myselect">-->
+<!--					<option value="?size=small-screen">Small Screen</option>-->
+<!--					<option value="?size=medium-screen">Medium Screen</option>-->
+<!--					<option value="?size=big-screen">Big Screen</option>-->
+<!--				</select>-->
+<!--			</label>-->
 			<p><a href="/">Log Off</a></p>
 		</div>
 	</div>
 </header>
-<div id="scene">
-	<object width="100%" height="98%" data="https://legacy.penguinzone.ca/boots.swf">
-		<param name="menu" value="false">
-		<param name="allowScriptAccess" value="always">
-		<param name="flashvars" value="lang=en">
-		<embed src="https://legacy.penguinzone.ca/boots.swf" width="100%" height="100%" type="application/x-shockwave-player">
-	</object>
+<div id="penguin_zone">
+	<div id="play_container">
+		<object type="application/x-shockwave-flash" id="game" name="game" data="https://legacy.penguinzone.ca/boots.swf" width="100%" height="100%"></object>
+		<div id="border_outer">
+			<div id="border"></div>
+		</div>
+	</div>
 </div>
 </body>
 <script>
+	const container = document.getElementById('play_container');
+
+	// Apply CSS styles to trim the container
+	container.style.overflow = 'hidden'; // Hide any content outside the container's bounds
+	container.style.borderRadius = '10px'; // Set the border radius
+
 	const selectElement = document.getElementById('myselect');
 
 	selectElement.onchange = function() {
