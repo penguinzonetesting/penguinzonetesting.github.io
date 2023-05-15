@@ -1,0 +1,21 @@
+﻿body {
+	 background-color: rgb(1, 134, 177);
+	 display: flex;
+	 flex-direction: column;
+	 height: 100vh;
+ }
+
+#scene {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(1, 134, 177);
+}
+
+#scene object {
+	width: 75%;
+	height: 98%;
+	background-color: rgb(1, 134, 177);
+}

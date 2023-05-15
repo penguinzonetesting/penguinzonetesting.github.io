@@ -1,0 +1,84 @@
+﻿@font-face {
+	font-family: 'Burbank Small Medium';
+	src: url('../../fonts/BurbankSmall-Bold.otf');
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	background-image: linear-gradient(rgb(0, 100, 175), rgb(0, 79, 143), rgb(0, 100, 175));
+	border-bottom: rgb(0, 44, 82) 4px solid;
+	display: flex;
+	justify-content: space-between;
+	font-family: "Burbank Small Medium";
+	color: white;
+}
+
+.penguin-zone-logo {
+	max-height: 5rem;
+	padding: 0.6rem 0 0.6rem 4rem;
+	filter: drop-shadow(0 0 0 transparent);
+	-webkit-filter: drop-shadow(0 0 0 transparent);
+	transition: filter 0.2s;
+	background-clip: content-box;
+}
+
+.header-vertical-column {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.penguin-zone-logo:hover {
+	filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white) drop-shadow(-3px 3px 0 white) drop-shadow(3px -3px 0 white);
+	-webkit-filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white) drop-shadow(-3px 3px 0 white) drop-shadow(3px -3px 0 white);
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.navbar > p {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-shadow: 2px 2px 0 black;
+}
+
+.navbar a {
+	padding: 1rem;
+	border-radius: 30px;
+	text-decoration: none;
+	color: white;
+	border: transparent 4px solid;
+	transition: color 0.4s, border 0.4s, background 0.4s;
+}
+
+.navbar a:hover {
+	color: rgb(128, 227, 255);
+	border: rgb(8, 122, 204) 4px solid;
+	background: rgb(8, 122, 204, 20%);
+}
+
+label {
+	text-shadow: 2px 2px 0 black;
+	padding: 1rem calc(1rem + 20px);
+	border-radius: 30px;
+	background-color: rgb(0, 106, 182);
+}
+
+select {
+	margin-left: 1rem;
+	padding: 4px 10px 3px;
+	border-radius: 30px;
+	color: white;
+	text-shadow: 2px 2px 0 black;
+	font-family: "Burbank Small Medium";
+	background-color: rgb(8, 122, 204);
+	border: rgb(0, 56, 105) 4px solid;
+}

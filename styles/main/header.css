@@ -1,11 +1,11 @@
 ﻿@font-face {
 	font-family: 'CCFaceFrontW00-Italic';
-	src: url("../fonts/CCFaceFront W00 Italic.ttf");
+	src: url("../../fonts/CCFaceFront W00 Italic.ttf");
 }
 
 @font-face {
 	font-family: 'Burbank Small Medium';
-	src: url('../fonts/BurbankSmall-Bold.otf');
+	src: url('../../fonts/BurbankSmall-Bold.otf');
 }
 
 body {

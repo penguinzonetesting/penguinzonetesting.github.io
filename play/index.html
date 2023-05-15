@@ -1,18 +1,92 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Play | Penguin Zone</title>
-  <link rel="stylesheet" href="../styles/game.css">
+	<meta charset="UTF-8">
+	<title>Play | Penguin Zone</title>
+	<link rel="stylesheet" href="../styles/play/header.css">
+	<link rel="stylesheet" href="../styles/play/play.css">
+	<link rel="stylesheet" href="../styles/play/game.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
-<object type="application/x-shockwave-flash" id="game" name="game" data="https://legacy.penguinzone.ca/boots.swf" width="100%" height="98%">
-  <param name="menu" value="false">
-  <param name="allowScriptAccess" value="always">
-  <param name="flashvars" value="lang=en">
-  <a href="https://get.adobe.com/flashplayer/">
-    <img id="noflash" src="/images/need-flash-player.gif" alt="Get Adobe Flash player" title="Get Adobe Flash player">
-  </a>
-</object>
+<header class="header">
+	<div>
+		<a href="/"><img src="../images/penguin_zone_logo.png" alt="Penguin Zone Logo" class="penguin-zone-logo"></a>
+	</div>
+	<div class="header-vertical-column">
+		<div class="navbar">
+			<p><a href="/">Home</a></p>
+			<p><a href="https://patreon.com/penguinzone">Support Us</a></p>
+			<p><a href="/download">Download</a></p>
+			<p><a href="/discord">Discord</a></p>
+		</div>
+	</div>
+	<div class="header-vertical-column">
+		<div class="navbar">
+			<label>Screen Size:
+				<select id="myselect">
+					<option value="?size=small-screen">Small Screen</option>
+					<option value="?size=medium-screen">Medium Screen</option>
+					<option value="?size=big-screen">Big Screen</option>
+				</select>
+			</label>
+			<p><a href="/">Log Off</a></p>
+		</div>
+	</div>
+</header>
+<div id="scene">
+	<object width="100%" height="98%" data="https://legacy.penguinzone.ca/boots.swf">
+		<param name="menu" value="false">
+		<param name="allowScriptAccess" value="always">
+		<param name="flashvars" value="lang=en">
+		<embed src="https://legacy.penguinzone.ca/boots.swf" width="100%" height="100%" type="application/x-shockwave-player">
+	</object>
+</div>
 </body>
+<script>
+	const selectElement = document.getElementById('myselect');
+
+	selectElement.onchange = function() {
+		location = this.options[this.selectedIndex].value;
+	}
+
+	$(document).ready(function() {
+		let isClosing = false;
+
+		$("#myselect")
+			.on("click", function() {
+				if (!isClosing) {
+					selectElement.style.borderBottomRightRadius = '0px';
+					selectElement.style.borderBottomLeftRadius = '0px';
+					selectElement.style.borderTopRightRadius = '15px';
+					selectElement.style.borderTopLeftRadius = '15px';
+					selectElement.style.borderBottomColor = 'transparent';
+					isClosing = !isClosing
+				} else if (isClosing) {
+					selectElement.style.borderBottomRightRadius = '30px';
+					selectElement.style.borderBottomLeftRadius = '30px';
+					selectElement.style.borderTopRightRadius = '30px';
+					selectElement.style.borderTopLeftRadius = '30px';
+					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
+					isClosing = !isClosing
+				}
+			})
+			.on("blur", function() {
+				if (!isClosing) {
+					selectElement.style.borderBottomRightRadius = '30px';
+					selectElement.style.borderBottomLeftRadius = '30px';
+					selectElement.style.borderTopRightRadius = '30px';
+					selectElement.style.borderTopLeftRadius = '30px';
+					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
+				} else if (isClosing) {
+					selectElement.style.borderBottomRightRadius = '30px';
+					selectElement.style.borderBottomLeftRadius = '30px';
+					selectElement.style.borderTopRightRadius = '30px';
+					selectElement.style.borderTopLeftRadius = '30px';
+					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
+					isClosing = !isClosing
+				}
+			})
+	});
+</script>
 </html>
