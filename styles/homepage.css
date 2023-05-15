@@ -1,4 +1,8 @@
-﻿#scene {
+﻿body {
+	background-color: rgb(1, 134, 177);
+}
+
+#scene {
 	height:475px;
 	width:100%;
 }
