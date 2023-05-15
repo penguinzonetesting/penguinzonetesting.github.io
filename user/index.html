@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Penguin ID | Penguin Zone</title>
+  <meta id="title-meta" content="Penguin ID | Penguin Zone" property="og:title" />
+  <meta id="description-meta" content="The penguins id is: " property="og:description" />
+  <meta content="/" property="og:url" />
+  <meta content="/images/penguin_zone_logo.png" property="og:image" />
+  <script>
+    window.onload = function() {
+      // Get the query parameter from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const penguinId = urlParams.get('penguin-id');
+
+      const titleMeta = document.getElementById('title-meta');
+      titleMeta.content = `Penguin ${penguinId} | Penguin Zone`;
+
+      const descriptionMeta = document.getElementById('description-meta');
+      descriptionMeta.content = `The penguin's ID is: ${penguinId}`;
+
+      // Display the player ID on the webpage
+      const penguinIdElement = document.getElementById('penguin-id');
+      penguinIdElement.textContent = penguinId;
+    };
+  </script>
+</head>
+<body>
+<h1>Penguin ID: <span id="penguin-id"></span></h1>
+</body>
+</html>

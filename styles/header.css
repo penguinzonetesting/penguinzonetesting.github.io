@@ -36,7 +36,7 @@ body {
 	-webkit-filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white) drop-shadow(-3px 3px 0 white) drop-shadow(3px -3px 0 white);
 }
 
-.vertical-column {
+.header-vertical-column {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -64,7 +64,7 @@ body {
 	border-radius: 30px;
 }
 
-#scrolling-text {
+#rotating-text {
 	position: relative;
 	top: 3px;
 	animation: fadeAnimation 4s ease-in-out infinite;

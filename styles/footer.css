@@ -1,0 +1,54 @@
+﻿@font-face {
+	font-family: 'Burbank Small Medium';
+	src: url('../fonts/BurbankSmall-Bold.otf');
+}
+
+.footer {
+	background-image: linear-gradient(rgb(0, 100, 175), rgb(0, 79, 143), rgb(0, 100, 175));
+	border-top: rgb(0, 44, 82) 4px solid;
+	padding-top: 10px;
+	text-align: center;
+	color: white;
+	font-family: "Burbank Small Medium";
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer > p {
+	margin: 4px;
+	font-size: 14px;
+	text-shadow: 2px 2px 0 black;
+}
+
+.secondary-navigation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.secondary-navigation p:not(:last-child)::after {
+	content: " | ​";
+	color: #aaa;
+}
+
+.secondary-navigation p {
+	display: inline-block;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 18px;
+	text-shadow: 2px 2px 0 black;
+}
+
+.secondary-navigation a {
+	text-decoration: none;
+	color: white;
+}
+
+.secondary-navigation a:hover {
+	color: rgb(44, 180, 204);
+}
