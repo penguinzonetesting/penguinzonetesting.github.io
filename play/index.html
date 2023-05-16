@@ -5,14 +5,16 @@
 	<title>Play | Penguin Zone</title>
 	<link rel="stylesheet" href="../styles/play/header.css">
 	<link rel="stylesheet" href="../styles/play/play.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="../styles/play/no_flash.css">
+	<script type="text/javascript" src="/scripts/play/play_container.js"></script>
+	<script type="text/javascript" src="/scripts/play/swfobject.js"></script>
 </head>
 <body>
 <header class="header">
 	<div>
 		<a href="/"><img src="../images/penguin_zone_logo.png" alt="Penguin Zone Logo" class="penguin-zone-logo"></a>
 	</div>
-	<div class="header-vertical-column">
+	<div class="vertical-center">
 		<div class="left-navbar">
 			<p><a href="/">Home</a></p>
 			<p><a href="https://patreon.com/penguinzone">Support Us</a></p>
@@ -20,78 +22,60 @@
 			<p><a href="/discord">Discord</a></p>
 		</div>
 	</div>
-	<div class="header-vertical-column">
+	<div class="vertical-center">
 		<div class="right-navbar">
-<!--			<label>Screen Size:-->
-<!--				<select id="myselect">-->
-<!--					<option value="?size=small-screen">Small Screen</option>-->
-<!--					<option value="?size=medium-screen">Medium Screen</option>-->
-<!--					<option value="?size=big-screen">Big Screen</option>-->
-<!--				</select>-->
-<!--			</label>-->
+			<div class="vertical-column">
+				<p><a href="#" id="smallScreenBtn">Small Screen</a></p>
+				<p><a href="#" id="mediumScreenBtn">Medium Screen</a></p>
+				<p><a href="#" id="largeScreenBtn">Large Screen</a></p>
+			</div>
 			<p><a href="/">Log Off</a></p>
 		</div>
 	</div>
 </header>
 <div id="penguin_zone">
 	<div id="play_container">
-		<object type="application/x-shockwave-flash" id="game" name="game" data="https://legacy.penguinzone.ca/boots.swf" width="100%" height="100%"></object>
+		<object type="application/x-shockwave-flash" id="game" name="game" data="https://legacy.penguinzone.ca/boots.swf" width="100%" height="100%">
+			<param name="bgcolor" value="#0186b1" />
+		</object>
 		<div id="border_outer">
 			<div id="border"></div>
 		</div>
 	</div>
+	<div id="noflash">
+		<img src="../images/penguin_zone_logo.png"  alt="Just a random image for now so I know if works. y,know">
+	</div>
 </div>
 </body>
 <script>
-	const container = document.getElementById('play_container');
+	function isElectron() {
+		// Renderer process
+		if (typeof window !== 'undefined' && typeof window.process === 'object' && window.process.type === 'renderer') {
+			return true;
+		}
 
-	// Apply CSS styles to trim the container
-	container.style.overflow = 'hidden'; // Hide any content outside the container's bounds
-	container.style.borderRadius = '10px'; // Set the border radius
+		// Main process
+		if (typeof process !== 'undefined' && typeof process.versions === 'object' && !!process.versions.electron) {
+			return true;
+		}
 
-	const selectElement = document.getElementById('myselect');
+		// Detect the user agent when the `nodeIntegration` option is set to true
+		if (typeof navigator === 'object' && typeof navigator.userAgent === 'string' && navigator.userAgent.indexOf('Electron') >= 0) {
+			return true;
+		}
 
-	selectElement.onchange = function() {
-		location = this.options[this.selectedIndex].value;
+		return false;
 	}
 
-	$(document).ready(function() {
-		let isClosing = false;
+	const container = document.getElementById('play_container');
+	const no_flash = document.getElementById('noflash');
 
-		$("#myselect")
-			.on("click", function() {
-				if (!isClosing) {
-					selectElement.style.borderBottomRightRadius = '0px';
-					selectElement.style.borderBottomLeftRadius = '0px';
-					selectElement.style.borderTopRightRadius = '15px';
-					selectElement.style.borderTopLeftRadius = '15px';
-					selectElement.style.borderBottomColor = 'transparent';
-					isClosing = !isClosing
-				} else if (isClosing) {
-					selectElement.style.borderBottomRightRadius = '30px';
-					selectElement.style.borderBottomLeftRadius = '30px';
-					selectElement.style.borderTopRightRadius = '30px';
-					selectElement.style.borderTopLeftRadius = '30px';
-					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
-					isClosing = !isClosing
-				}
-			})
-			.on("blur", function() {
-				if (!isClosing) {
-					selectElement.style.borderBottomRightRadius = '30px';
-					selectElement.style.borderBottomLeftRadius = '30px';
-					selectElement.style.borderTopRightRadius = '30px';
-					selectElement.style.borderTopLeftRadius = '30px';
-					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
-				} else if (isClosing) {
-					selectElement.style.borderBottomRightRadius = '30px';
-					selectElement.style.borderBottomLeftRadius = '30px';
-					selectElement.style.borderTopRightRadius = '30px';
-					selectElement.style.borderTopLeftRadius = '30px';
-					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
-					isClosing = !isClosing
-				}
-			})
-	});
+	if (isElectron() || swfobject.hasFlashPlayerVersion("1")) {
+		container.style.display = "flex";
+		no_flash.style.display = "nome";
+	} else {
+		container.style.display = "none";
+		no_flash.style.display = "flex";
+	}
 </script>
 </html>

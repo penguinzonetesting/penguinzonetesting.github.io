@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Events | Penguin Zone</title>
+	<link rel="stylesheet" href="../styles/play/header.css">
+	<link rel="stylesheet" href="../styles/play/play.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+<header class="header">
+	<div>
+		<a href="/"><img src="../images/penguin_zone_logo.png" alt="Penguin Zone Logo" class="penguin-zone-logo"></a>
+	</div>
+	<div class="header-vertical-column">
+		<div class="left-navbar">
+			<p><a href="/">Home</a></p>
+			<p><a href="https://patreon.com/penguinzone">Support Us</a></p>
+			<p><a href="/download">Download</a></p>
+			<p><a href="/discord">Discord</a></p>
+		</div>
+	</div>
+	<div class="header-vertical-column">
+		<div class="right-navbar">
+			<p><a href="/">Log Off</a></p>
+		</div>
+	</div>
+</header>
+<div id="penguin_zone">
+	<div id="play_container">
+		<object type="application/x-shockwave-flash" id="game" name="game" data="https://legacy.penguinzone.ca/play/v2/content/global/content/events.swf" width="100%" height="100%">
+			<param name="bgcolor" value="#0186b1" />
+		</object>
+	</div>
+</div>
+</body>
+<script>
+	const container = document.getElementById('play_container');
+
+	// Apply CSS styles to trim the container
+	container.style.overflow = 'hidden'; // Hide any content outside the container's bounds
+	container.style.borderRadius = '10px'; // Set the border radius
+
+	const selectElement = document.getElementById('myselect');
+
+	selectElement.onchange = function() {
+		location = this.options[this.selectedIndex].value;
+	}
+
+	$(document).ready(function() {
+		let isClosing = false;
+
+		$("#myselect")
+			.on("click", function() {
+				if (!isClosing) {
+					selectElement.style.borderBottomRightRadius = '0px';
+					selectElement.style.borderBottomLeftRadius = '0px';
+					selectElement.style.borderTopRightRadius = '15px';
+					selectElement.style.borderTopLeftRadius = '15px';
+					selectElement.style.borderBottomColor = 'transparent';
+					isClosing = !isClosing
+				} else if (isClosing) {
+					selectElement.style.borderBottomRightRadius = '30px';
+					selectElement.style.borderBottomLeftRadius = '30px';
+					selectElement.style.borderTopRightRadius = '30px';
+					selectElement.style.borderTopLeftRadius = '30px';
+					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
+					isClosing = !isClosing
+				}
+			})
+			.on("blur", function() {
+				if (!isClosing) {
+					selectElement.style.borderBottomRightRadius = '30px';
+					selectElement.style.borderBottomLeftRadius = '30px';
+					selectElement.style.borderTopRightRadius = '30px';
+					selectElement.style.borderTopLeftRadius = '30px';
+					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
+				} else if (isClosing) {
+					selectElement.style.borderBottomRightRadius = '30px';
+					selectElement.style.borderBottomLeftRadius = '30px';
+					selectElement.style.borderTopRightRadius = '30px';
+					selectElement.style.borderTopLeftRadius = '30px';
+					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
+					isClosing = !isClosing
+				}
+			})
+	});
+</script>
+</html>

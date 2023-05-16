@@ -1,0 +1,7 @@
+﻿#noflash {
+	display: none;
+}
+
+#play_container {
+	display: flex;
+}
