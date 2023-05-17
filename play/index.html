@@ -10,12 +10,12 @@
 	<script type="text/javascript" src="/scripts/play/swfobject.js"></script>
 </head>
 <body>
-<header class="header">
+<header id="header">
 	<div>
-		<a href="/"><img src="../images/penguin_zone_logo.png" alt="Penguin Zone Logo" class="penguin-zone-logo"></a>
+		<a href="/"><img src="../images/penguin_zone_logo.png" alt="Penguin Zone Logo" id="penguin-zone-logo"></a>
 	</div>
 	<div class="vertical-center">
-		<div class="left-navbar">
+		<div id="left-navbar">
 			<p><a href="/">Home</a></p>
 			<p><a href="https://patreon.com/penguinzone">Support Us</a></p>
 			<p><a href="/download">Download</a></p>
@@ -23,13 +23,19 @@
 		</div>
 	</div>
 	<div class="vertical-center">
-		<div class="right-navbar">
-			<div class="vertical-column">
-				<p><a href="#" id="smallScreenBtn">Small Screen</a></p>
-				<p><a href="#" id="mediumScreenBtn">Medium Screen</a></p>
-				<p><a href="#" id="largeScreenBtn">Large Screen</a></p>
+		<div id="right-navbar">
+			<div id="vertical-column">
+				<p><a href="#" id="smallScreenBtn">
+					Small Screen
+				</a></p>
+				<p><a href="#" id="mediumScreenBtn">
+					Medium Screen
+				</a></p>
+				<p><a href="#" id="largeScreenBtn">
+					Large Screen
+				</a></p>
 			</div>
-			<p><a href="/">Log Off</a></p>
+			<p><a href="/" id="big-padding">Log Off</a></p>
 		</div>
 	</div>
 </header>
@@ -43,7 +49,26 @@
 		</div>
 	</div>
 	<div id="noflash">
-		<img src="../images/penguin_zone_logo.png"  alt="Just a random image for now so I know if works. y,know">
+		<img id="noflashimg" src="../images/no_flash_detected.png" alt="No Flash Detected Image">
+		<div id="upgradeContent">
+			<div id="upgradeText">
+				<h1>Penguin Zone requires Flash to play!</h1>
+				<p>You can download the Penguin Zone client below.</p>
+				<p>You can also launch the client, if you have already downloaded it.</p>
+			</div>
+			<div id="upgradeButton">
+				<a href="../downloads">
+					<div id="downloadButton">
+						<p>Download Penguin Zone Client</p>
+					</div>
+				</a>
+				<a href="penguinzone://">
+					<div id="launchButton">
+						<p>Launch Penguin Zone Client</p>
+					</div>
+				</a>
+			</div>
+		</div>
 	</div>
 </div>
 </body>
@@ -69,13 +94,19 @@
 
 	const container = document.getElementById('play_container');
 	const no_flash = document.getElementById('noflash');
+	const left_navbar = document.getElementById('left-navbar');
+	const right_navbar = document.getElementById('right-navbar');
 
 	if (isElectron() || swfobject.hasFlashPlayerVersion("1")) {
 		container.style.display = "flex";
 		no_flash.style.display = "nome";
+		left_navbar.style.paddingRight = "0";
+		right_navbar.style.display = "flex";
 	} else {
 		container.style.display = "none";
-		no_flash.style.display = "flex";
+		no_flash.style.display = "flex"
+		left_navbar.style.paddingRight = "20.5rem";
+		right_navbar.style.display = "none";
 	}
 </script>
 </html>

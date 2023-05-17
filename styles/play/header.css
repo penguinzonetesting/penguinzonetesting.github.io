@@ -8,7 +8,7 @@ body {
 	margin: 0;
 }
 
-.header {
+#header {
 	background-image: linear-gradient(rgb(0, 100, 175), rgb(0, 79, 143), rgb(0, 100, 175));
 	border-bottom: rgb(0, 44, 82) 4px solid;
 	display: flex;
@@ -17,7 +17,7 @@ body {
 	color: white;
 }
 
-.penguin-zone-logo {
+#penguin-zone-logo {
 	max-height: 5rem;
 	padding: 0.6rem 0 0.6rem 4rem;
 	filter: drop-shadow(0 0 0 transparent);
@@ -26,24 +26,24 @@ body {
 	background-clip: content-box;
 }
 
-.penguin-zone-logo:hover {
+#penguin-zone-logo:hover {
 	filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white) drop-shadow(-3px 3px 0 white) drop-shadow(3px -3px 0 white);
 	-webkit-filter: drop-shadow(3px 3px 0 white) drop-shadow(-3px -3px 0 white) drop-shadow(-3px 3px 0 white) drop-shadow(3px -3px 0 white);
 }
 
-.left-navbar {
+#left-navbar {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
-.left-navbar > p {
+#left-navbar > p {
 	padding-left: 5px;
 	padding-right: 5px;
 	text-shadow: 2px 2px 0 black;
 }
 
-.left-navbar a {
+#left-navbar a {
 	padding: 1rem;
 	border-radius: 30px;
 	text-decoration: none;
@@ -52,34 +52,46 @@ body {
 	transition: color 0.4s, border 0.4s, background 0.4s;
 }
 
-.left-navbar a:hover {
+#left-navbar a:hover {
 	color: rgb(128, 227, 255);
 	border: rgb(8, 122, 204) 4px solid;
 	background: rgb(8, 122, 204, 20%);
 }
 
-.right-navbar {
+#right-navbar {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 }
 
-.right-navbar > p {
+#right-navbar > p {
 	padding-left: 20px;
 	padding-right: 20px;
 	text-shadow: 2px 2px 0 black;
 }
 
-.right-navbar a {
+#right-navbar a {
+	padding: 1rem;
+	border-radius: 30px;
+	text-decoration: none;
+	color: white;
+	border: transparent 4px solid;
+	transition: color 0.4s, border 0.4s, background 0.4s;
+	text-shadow: 2px 2px 0 black;
+}
+
+#vertical-column a {
 	padding: 0.5rem;
 	border-radius: 30px;
 	text-decoration: none;
 	color: white;
 	border: transparent 4px solid;
 	transition: color 0.4s, border 0.4s, background 0.4s;
+	text-shadow: 2px 2px 0 black;
 }
 
-.right-navbar a:hover {
+#right-navbar a:hover {
 	color: rgb(128, 227, 255);
 	border: rgb(8, 122, 204) 4px solid;
 	background: rgb(8, 122, 204, 20%);
@@ -92,21 +104,21 @@ body {
 	text-align: center;
 }
 
-.vertical-column {
+#vertical-column {
 	display: flex;
 	flex-direction: column;
 	margin-right: 2rem;
 }
 
-.vertical-column > p {
+#vertical-column > p {
 	margin: 0;
 	padding: 0;
 }
 
-.vertical-column > p:nth-child(2) {
+#vertical-column > p:nth-child(2) {
 	margin: 1rem;
 }
 
-.vertical-column > a {
+#vertical-column > a {
 	padding: 0;
 }
