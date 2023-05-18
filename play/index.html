@@ -6,7 +6,8 @@
 	<link rel="stylesheet" href="../styles/play/header.css">
 	<link rel="stylesheet" href="../styles/play/play.css">
 	<link rel="stylesheet" href="../styles/play/no_flash.css">
-	<script type="text/javascript" src="/scripts/play/play_container.js"></script>
+	<script type="text/javascript" src="/scripts/play/flash_toggle.js"></script>
+	<script type="text/javascript" src="/scripts/play/play_container_styling.js"></script>
 	<script type="text/javascript" src="/scripts/play/swfobject.js"></script>
 </head>
 <body>
@@ -25,15 +26,17 @@
 	<div class="vertical-center">
 		<div id="right-navbar">
 			<div id="vertical-column">
-				<p><a href="#" id="smallScreenBtn">
-					Small Screen
-				</a></p>
-				<p><a href="#" id="mediumScreenBtn">
-					Medium Screen
-				</a></p>
-				<p><a href="#" id="largeScreenBtn">
-					Large Screen
-				</a></p>
+				<div id="screenLinks">
+					<p><a href="#" id="smallScreenLink">
+						Small Screen
+					</a></p>
+					<p><a href="#" id="mediumScreenLink">
+						Medium Screen
+					</a></p>
+					<p><a href="#" id="largeScreenLink">
+						Large Screen
+					</a></p>
+				</div>
 			</div>
 			<p><a href="/" id="big-padding">Log Off</a></p>
 		</div>
@@ -73,40 +76,68 @@
 </div>
 </body>
 <script>
-	function isElectron() {
-		// Renderer process
-		if (typeof window !== 'undefined' && typeof window.process === 'object' && window.process.type === 'renderer') {
-			return true;
-		}
+	const smallScreenLink = document.getElementById("smallScreenLink")
+	const mediumScreenLink  = document.getElementById("mediumScreenLink")
+	const largeScreenLink  = document.getElementById("largeScreenLink")
 
-		// Main process
-		if (typeof process !== 'undefined' && typeof process.versions === 'object' && !!process.versions.electron) {
-			return true;
-		}
+	const gameElement  = document.getElementById("game")
+	const borderElement  = document.getElementById("border")
+	
+	function handleSmallScreenClick(event) {
+		event.preventDefault();
 
-		// Detect the user agent when the `nodeIntegration` option is set to true
-		if (typeof navigator === 'object' && typeof navigator.userAgent === 'string' && navigator.userAgent.indexOf('Electron') >= 0) {
-			return true;
-		}
+		smallScreenLink.style.display = "none";
+		mediumScreenLink.style.display = "unset";
+		largeScreenLink.style.display = "unset";
 
-		return false;
+		gameElement.style.minHeight = "540px";
+		gameElement.style.maxHeight = "540px";
+		gameElement.style.minWidth = "855px";
+		gameElement.style.maxWidth = "855px";
+		borderElement.style.minHeight = "540px";
+		borderElement.style.maxHeight = "540px";
+		borderElement.style.minWidth = "855px";
+		borderElement.style.maxWidth = "855px";
+	}
+	
+	function handleMediumScreenClick(event) {
+		event.preventDefault();
+
+		smallScreenLink.style.display = "";
+		mediumScreenLink.style.display = "";
+		largeScreenLink.style.display = "";
+
+		gameElement.style.minHeight = "";
+		gameElement.style.maxHeight = "";
+		gameElement.style.minWidth = "";
+		gameElement.style.maxWidth = "";
+		borderElement.style.minHeight = "";
+		borderElement.style.maxHeight = "";
+		borderElement.style.minWidth = "";
+		borderElement.style.maxWidth = "";
+	}
+	
+	function handleLargeScreenClick(event) {
+		event.preventDefault();
+
+		smallScreenLink.style.display = "unset";
+		mediumScreenLink.style.display = "unset";
+		largeScreenLink.style.display = "none";
+
+		gameElement.style.left = "1px"
+		gameElement.style.minHeight = "984px";
+		gameElement.style.maxHeight = "984px";
+		gameElement.style.minWidth = "1558px";
+		gameElement.style.maxWidth = "1558px";
+		borderElement.style.minHeight = "984px";
+		borderElement.style.maxHeight = "984px";
+		borderElement.style.minWidth = "1558px";
+		borderElement.style.maxWidth = "1558px";
+		borderElement.style.border = "rgb(0, 44, 82) 12px solid";
 	}
 
-	const container = document.getElementById('play_container');
-	const no_flash = document.getElementById('noflash');
-	const left_navbar = document.getElementById('left-navbar');
-	const right_navbar = document.getElementById('right-navbar');
-
-	if (isElectron() || swfobject.hasFlashPlayerVersion("1")) {
-		container.style.display = "flex";
-		no_flash.style.display = "nome";
-		left_navbar.style.paddingRight = "0";
-		right_navbar.style.display = "flex";
-	} else {
-		container.style.display = "none";
-		no_flash.style.display = "flex"
-		left_navbar.style.paddingRight = "20.5rem";
-		right_navbar.style.display = "none";
-	}
+	smallScreenLink.addEventListener("click", handleSmallScreenClick);
+	mediumScreenLink.addEventListener("click", handleMediumScreenClick);
+	largeScreenLink.addEventListener("click", handleLargeScreenClick);
 </script>
 </html>

@@ -122,3 +122,11 @@ body {
 #vertical-column > a {
 	padding: 0;
 }
+
+#screenLinks {
+	min-width: 10rem;
+}
+
+#mediumScreenLink {
+	display: none;
+}
