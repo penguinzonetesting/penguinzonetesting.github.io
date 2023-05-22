@@ -3,42 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Play | Penguin Zone</title>
+	<meta content="Play | Penguin Zone" property="og:title" />
+	<meta content="Welcome to Penguin Zone; a free virtual world based on Club Penguin that allows you to meet new friends online in a moderated, safe environment!" property="og:description" />
+	<meta content="/" property="og:url" />
+	<meta content="/images/penguin_zone_logo.png" property="og:image" />
 	<link rel="stylesheet" href="../styles/play/header.css">
 	<link rel="stylesheet" href="../styles/play/play.css">
 	<link rel="stylesheet" href="../styles/play/no_flash.css">
+	<link rel="stylesheet" href="../styles/footer.css">
 	<script type="text/javascript" src="/scripts/play/flash_toggle.js"></script>
 	<script type="text/javascript" src="/scripts/play/play_container_styling.js"></script>
-	<script type="text/javascript" src="/scripts/play/swfobject.js"></script>
+	<script type="text/javascript" src="/scripts/swfobject.js"></script>
+	<script src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+	<script type="text/javascript" src="/scripts/disabledevtools.js"></script>
 </head>
 <body>
 <header id="header">
-	<div>
-		<a href="/"><img src="../images/penguin_zone_logo.png" alt="Penguin Zone Logo" id="penguin-zone-logo"></a>
-	</div>
-	<div class="vertical-center">
-		<div id="left-navbar">
-			<p><a href="/">Home</a></p>
-			<p><a href="https://patreon.com/penguinzone">Support Us</a></p>
-			<p><a href="/download">Download</a></p>
-			<p><a href="/discord">Discord</a></p>
+	<div id="inner-header">
+		<div>
+			<a href="/"><img src="../images/penguin_zone_logo.png" alt="Penguin Zone Logo" id="penguin-zone-logo"></a>
 		</div>
-	</div>
-	<div class="vertical-center">
-		<div id="right-navbar">
-			<div id="vertical-column">
-				<div id="screenLinks">
-					<p><a href="#" id="smallScreenLink">
-						Small Screen
-					</a></p>
-					<p><a href="#" id="mediumScreenLink">
-						Medium Screen
-					</a></p>
-					<p><a href="#" id="largeScreenLink">
-						Large Screen
-					</a></p>
-				</div>
+		<div class="vertical-center">
+			<div id="left-navbar">
+				<p><a href="/">Home</a></p>
+				<p><a href="https://patreon.com/penguinzone">Support Us</a></p>
+				<p><a href="/download">Download</a></p>
+				<p><a href="/discord">Discord</a></p>
+				<p><a href="/events">Events</a></p>
 			</div>
-			<p><a href="/" id="big-padding">Log Off</a></p>
+		</div>
+		<div class="vertical-center">
+			<div id="right-navbar">
+				<div id="vertical-column">
+					<div id="screenLinks">
+						<p><a href="#" id="smallScreenLink">
+							Small Screen
+						</a></p>
+						<p><a href="#" id="mediumScreenLink">
+							Medium Screen
+						</a></p>
+						<p><a href="#" id="largeScreenLink">
+							Large Screen
+						</a></p>
+					</div>
+				</div>
+				<p><a href="/" id="big-padding">Log Off</a></p>
+			</div>
 		</div>
 	</div>
 </header>
@@ -55,7 +65,7 @@
 		<img id="noflashimg" src="../images/no_flash_detected.png" alt="No Flash Detected Image">
 		<div id="upgradeContent">
 			<div id="upgradeText">
-				<h1>Penguin Zone requires Flash to play!</h1>
+				<h1>Penguin Zone requires Flash to access!</h1>
 				<p>You can download the Penguin Zone client below.</p>
 				<p>You can also launch the client, if you have already downloaded it.</p>
 			</div>
@@ -74,6 +84,20 @@
 		</div>
 	</div>
 </div>
+<footer class="footer">
+	<div class="secondary-navigation">
+		<p><a href="/privacy-policy">Privacy Policy</a></p>
+		<p><a href="/legal">Legal</a></p>
+		<p><a href="/twitter">Twitter</a></p>
+		<p><a href="/download">Download</a></p>
+	</div>
+	<p>Club Penguin&trade; Disney Canada Inc. &copy; Disney. All rights reserved.</p>
+	<p>Penguin Zone claims no copyright on any files/artworks from Club Penguin&trade;.</p>
+	<p>All copyright remains with Disney Canada Inc. (and its parent companies)</p>
+	<div class="secondary-navigation">
+		<p><a href="/legal">Learn more</a></p>
+	</div>
+</footer>
 </body>
 <script>
 	const smallScreenLink = document.getElementById("smallScreenLink")
@@ -82,7 +106,7 @@
 
 	const gameElement  = document.getElementById("game")
 	const borderElement  = document.getElementById("border")
-	
+
 	function handleSmallScreenClick(event) {
 		event.preventDefault();
 
@@ -99,7 +123,7 @@
 		borderElement.style.minWidth = "855px";
 		borderElement.style.maxWidth = "855px";
 	}
-	
+
 	function handleMediumScreenClick(event) {
 		event.preventDefault();
 
@@ -116,7 +140,7 @@
 		borderElement.style.minWidth = "";
 		borderElement.style.maxWidth = "";
 	}
-	
+
 	function handleLargeScreenClick(event) {
 		event.preventDefault();
 

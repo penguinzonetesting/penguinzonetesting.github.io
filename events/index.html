@@ -3,26 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Events | Penguin Zone</title>
-	<link rel="stylesheet" href="../styles/play/header.css">
-	<link rel="stylesheet" href="../styles/play/play.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<meta content="Events | Penguin Zone" property="og:title" />
+	<meta content="Welcome to Penguin Zone; a free virtual world based on Club Penguin that allows you to meet new friends online in a moderated, safe environment!" property="og:description" />
+	<meta content="/" property="og:url" />
+	<meta content="/images/penguin_zone_logo.png" property="og:image" />
+	<link rel="stylesheet" href="../styles/events/header.css">
+	<link rel="stylesheet" href="../styles/events/events.css">
+	<link rel="stylesheet" href="../styles/events/no_flash.css">
+	<link rel="stylesheet" href="../styles/footer.css">
+	<script type="text/javascript" src="/scripts/events/flash_toggle.js"></script>
+	<script type="text/javascript" src="/scripts/swfobject.js"></script>
+	<script src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+	<script type="text/javascript" src="/scripts/disabledevtools.js"></script>
 </head>
 <body>
-<header class="header">
-	<div>
-		<a href="/"><img src="../images/penguin_zone_logo.png" alt="Penguin Zone Logo" class="penguin-zone-logo"></a>
-	</div>
-	<div class="header-vertical-column">
-		<div class="left-navbar">
-			<p><a href="/">Home</a></p>
-			<p><a href="https://patreon.com/penguinzone">Support Us</a></p>
-			<p><a href="/download">Download</a></p>
-			<p><a href="/discord">Discord</a></p>
+<header id="header">
+	<div id="inner-header">
+		<div>
+			<a href="/"><img src="../images/penguin_zone_logo.png" alt="Penguin Zone Logo" id="penguin-zone-logo"></a>
 		</div>
-	</div>
-	<div class="header-vertical-column">
-		<div class="right-navbar">
-			<p><a href="/">Log Off</a></p>
+		<div class="vertical-center">
+			<div id="left-navbar">
+				<p><a href="/">Home</a></p>
+				<p><a href="https://patreon.com/penguinzone">Support Us</a></p>
+				<p><a href="/download">Download</a></p>
+				<p><a href="/discord">Discord</a></p>
+				<p><a href="/events">Events</a></p>
+			</div>
 		</div>
 	</div>
 </header>
@@ -32,58 +39,42 @@
 			<param name="bgcolor" value="#0186b1" />
 		</object>
 	</div>
+	<div id="noflash">
+		<img id="noflashimg" src="../images/no_flash_detected.png" alt="No Flash Detected Image">
+		<div id="upgradeContent">
+			<div id="upgradeText">
+				<h1>Penguin Zone requires Flash to access!</h1>
+				<p>You can download the Penguin Zone client below.</p>
+				<p>You can also launch the client, if you have already downloaded it.</p>
+			</div>
+			<div id="upgradeButton">
+				<a href="../downloads">
+					<div id="downloadButton">
+						<p>Download Penguin Zone Client</p>
+					</div>
+				</a>
+				<a href="penguinzone://">
+					<div id="launchButton">
+						<p>Launch Penguin Zone Client</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
+<footer class="footer">
+	<div class="secondary-navigation">
+		<p><a href="/privacy-policy">Privacy Policy</a></p>
+		<p><a href="/legal">Legal</a></p>
+		<p><a href="/twitter">Twitter</a></p>
+		<p><a href="/download">Download</a></p>
+	</div>
+	<p>Club Penguin&trade; Disney Canada Inc. &copy; Disney. All rights reserved.</p>
+	<p>Penguin Zone claims no copyright on any files/artworks from Club Penguin&trade;.</p>
+	<p>All copyright remains with Disney Canada Inc. (and its parent companies)</p>
+	<div class="secondary-navigation">
+		<p><a href="/legal">Learn more</a></p>
+	</div>
+</footer>
 </body>
-<script>
-	const container = document.getElementById('play_container');
-
-	// Apply CSS styles to trim the container
-	container.style.overflow = 'hidden'; // Hide any content outside the container's bounds
-	container.style.borderRadius = '10px'; // Set the border radius
-
-	const selectElement = document.getElementById('myselect');
-
-	selectElement.onchange = function() {
-		location = this.options[this.selectedIndex].value;
-	}
-
-	$(document).ready(function() {
-		let isClosing = false;
-
-		$("#myselect")
-			.on("click", function() {
-				if (!isClosing) {
-					selectElement.style.borderBottomRightRadius = '0px';
-					selectElement.style.borderBottomLeftRadius = '0px';
-					selectElement.style.borderTopRightRadius = '15px';
-					selectElement.style.borderTopLeftRadius = '15px';
-					selectElement.style.borderBottomColor = 'transparent';
-					isClosing = !isClosing
-				} else if (isClosing) {
-					selectElement.style.borderBottomRightRadius = '30px';
-					selectElement.style.borderBottomLeftRadius = '30px';
-					selectElement.style.borderTopRightRadius = '30px';
-					selectElement.style.borderTopLeftRadius = '30px';
-					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
-					isClosing = !isClosing
-				}
-			})
-			.on("blur", function() {
-				if (!isClosing) {
-					selectElement.style.borderBottomRightRadius = '30px';
-					selectElement.style.borderBottomLeftRadius = '30px';
-					selectElement.style.borderTopRightRadius = '30px';
-					selectElement.style.borderTopLeftRadius = '30px';
-					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
-				} else if (isClosing) {
-					selectElement.style.borderBottomRightRadius = '30px';
-					selectElement.style.borderBottomLeftRadius = '30px';
-					selectElement.style.borderTopRightRadius = '30px';
-					selectElement.style.borderTopLeftRadius = '30px';
-					selectElement.style.borderBottomColor = 'rgb(0, 56, 105)';
-					isClosing = !isClosing
-				}
-			})
-	});
-</script>
 </html>

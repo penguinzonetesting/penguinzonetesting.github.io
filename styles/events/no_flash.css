@@ -1,0 +1,90 @@
+﻿#noflash {
+	display: none;
+	position: relative;
+	width: 1140px;
+	height: 720px;
+}
+
+#noflashimg {
+	position: relative;
+	width: auto;
+	height: auto;
+}
+
+#play_container {
+	display: flex;
+}
+
+#upgradeContent {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#upgradeText {
+	position: relative;
+	top: 100px;
+	left: 420px;
+	width: 610px;
+}
+
+#upgradeText > h1 {
+	color: black;
+	font-size: 36px;
+	font-family: "Burbank Small Medium";
+}
+
+#upgradeText > p {
+	color: dimgrey;
+	font-size: 32px;
+	font-family: "Burbank Small Medium";
+}
+
+#upgradeButton {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	top: 280px;
+	gap: 20px;
+	padding-left: 230px;
+}
+
+#upgradeButton > a {
+	text-decoration: none;
+}
+
+#downloadButton {
+	background-image: linear-gradient(rgb(0, 149, 240), rgb(0, 83, 176));
+	border: rgb(39, 165, 255) 5px solid;
+	border-radius: 10px;
+	width: 330px;
+}
+
+#downloadButton:hover {
+	background-image: linear-gradient(rgb(0, 117, 189), rgb(0, 58, 125));
+	border: rgb(31, 132, 204) 5px solid;
+}
+
+#downloadButton > p {
+	color: white;
+	font-family: "Burbank Small Medium";
+	text-align: center;
+}
+
+#launchButton {
+	background-image: linear-gradient(rgb(0, 149, 240), rgb(0, 83, 176));
+	border: rgb(39, 165, 255) 5px solid;
+	border-radius: 10px;
+	width: 330px;
+}
+
+#launchButton:hover {
+	background-image: linear-gradient(rgb(0, 117, 189), rgb(0, 58, 125));
+	border: rgb(31, 132, 204) 5px solid;
+}
+
+#launchButton > p {
+	color: white;
+	font-family: "Burbank Small Medium";
+	text-align: center;
+}

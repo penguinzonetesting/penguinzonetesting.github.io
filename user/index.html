@@ -1,25 +1,64 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Penguin ID | Penguin Zone</title>
-  <meta id="title-meta" content="Penguin ID | Penguin Zone" property="og:title" />
-  <meta id="description-meta" content="Penguin ID" property="og:description" />
-  <meta content="/" property="og:url" />
-  <meta content="/images/penguin_zone_logo.png" property="og:image" />
-  <script>
-    window.onload = function() {
-      // Get the query parameter from the URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const penguinId = urlParams.get('penguin-id');
+	<meta charset="UTF-8">
+	<title>Penguin ID | Penguin Zone</title>
+	<meta id="title-meta" content="User | Penguin Zone" property="og:title" />
+	<meta id="description-meta" content="Penguin ID" property="og:description" />
+	<meta content="/" property="og:url" />
+	<meta content="/images/penguin_zone_logo.png" property="og:image" />
+	<link rel="stylesheet" href="../styles/user/header.css">
+	<link rel="stylesheet" href="../styles/user/user.css">
+	<link rel="stylesheet" href="../styles/footer.css">
+	<script src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+	<script type="text/javascript" src="/scripts/disabledevtools.js"></script>
+	<script>
+		window.onload = function() {
+			// Get the query parameter from the URL
+			const urlParams = new URLSearchParams(window.location.search);
+			const penguinId = urlParams.get('penguin-id');
 
-      // Display the player ID on the webpage
-      const penguinIdElement = document.getElementById('penguin-id');
-      penguinIdElement.textContent = penguinId;
-    };
-  </script>
+			// Display the player ID on the webpage
+			const penguinIdElement = document.getElementById('penguin-id');
+			penguinIdElement.textContent = penguinId;
+		};
+	</script>
 </head>
 <body>
-<h1>Penguin ID: <span id="penguin-id"></span></h1>
+<header id="header">
+	<div id="inner-header">
+		<div>
+			<a href="/"><img src="../images/penguin_zone_logo.png" alt="Penguin Zone Logo" id="penguin-zone-logo"></a>
+		</div>
+		<div class="vertical-center">
+			<div id="left-navbar">
+				<p><a href="/">Home</a></p>
+				<p><a href="https://patreon.com/penguinzone">Support Us</a></p>
+				<p><a href="/download">Download</a></p>
+				<p><a href="/discord">Discord</a></p>
+				<p><a href="/events">Events</a></p>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="body">
+	<div id="id-box">
+		<h1>Penguin ID: <span id="penguin-id"></span></h1>
+	</div>
+</div>
+<footer class="footer">
+	<div class="secondary-navigation">
+		<p><a href="/privacy-policy">Privacy Policy</a></p>
+		<p><a href="/legal">Legal</a></p>
+		<p><a href="/twitter">Twitter</a></p>
+		<p><a href="/download">Download</a></p>
+	</div>
+	<p>Club Penguin&trade; Disney Canada Inc. &copy; Disney. All rights reserved.</p>
+	<p>Penguin Zone claims no copyright on any files/artworks from Club Penguin&trade;.</p>
+	<p>All copyright remains with Disney Canada Inc. (and its parent companies)</p>
+	<div class="secondary-navigation">
+		<p><a href="/legal">Learn more</a></p>
+	</div>
+</footer>
 </body>
 </html>

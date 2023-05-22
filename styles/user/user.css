@@ -1,0 +1,23 @@
+﻿html, body {
+	height: 100vh;
+	background-color: rgb(1, 134, 177);
+}
+
+#body {
+	display: flex;
+	justify-content: center;
+	margin-top: 3rem;
+}
+
+#id-box {
+	background-image: linear-gradient(rgb(0, 149, 240), rgb(0, 83, 176));
+	border: rgb(39, 165, 255) 5px solid;
+	border-radius: 10px;
+	padding: 1rem;
+	width: 330px;
+	text-align: center;
+}
+
+h1 {
+	color: white;
+}

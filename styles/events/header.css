@@ -20,7 +20,7 @@ body {
 #inner-header {
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
+	width: 50%;
 }
 
 #penguin-zone-logo {
@@ -64,75 +64,9 @@ body {
 	background: rgb(8, 122, 204, 20%);
 }
 
-#right-navbar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
-#right-navbar > p {
-	padding-left: 20px;
-	padding-right: 20px;
-	text-shadow: 2px 2px 0 black;
-}
-
-#right-navbar a {
-	padding: 1rem;
-	border-radius: 30px;
-	text-decoration: none;
-	color: white;
-	border: transparent 4px solid;
-	transition: color 0.4s, border 0.4s, background 0.4s;
-	text-shadow: 2px 2px 0 black;
-}
-
-#vertical-column a {
-	padding: 0.5rem;
-	border-radius: 30px;
-	text-decoration: none;
-	color: white;
-	border: transparent 4px solid;
-	transition: color 0.4s, border 0.4s, background 0.4s;
-	text-shadow: 2px 2px 0 black;
-}
-
-#right-navbar a:hover {
-	color: rgb(128, 227, 255);
-	border: rgb(8, 122, 204) 4px solid;
-	background: rgb(8, 122, 204, 20%);
-}
-
 .vertical-center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-}
-
-#vertical-column {
-	display: flex;
-	flex-direction: column;
-	margin-right: 2rem;
-}
-
-#vertical-column > p {
-	margin: 0;
-	padding: 0;
-}
-
-#vertical-column > p:nth-child(2) {
-	margin: 1rem;
-}
-
-#vertical-column > a {
-	padding: 0;
-}
-
-#screenLinks {
-	min-width: 10rem;
-}
-
-#mediumScreenLink {
-	display: none;
 }

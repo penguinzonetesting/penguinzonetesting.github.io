@@ -1,0 +1,21 @@
+﻿body {
+	background-color: rgb(1, 134, 177);
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+#penguin_zone {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	position: relative;
+}
+
+#play_container {
+	margin: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
