@@ -19,8 +19,9 @@ body {
 
 #inner-header {
 	display: flex;
-	justify-content: space-between;
 	width: 100%;
+	justify-content: space-between;
+	gap: normal;
 }
 
 #penguin-zone-logo {

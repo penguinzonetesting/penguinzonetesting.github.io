@@ -15,15 +15,17 @@
 		container.style.display = "";
 		no_flash.style.display = "";
 		inner_header.style.display = "";
-		inner_header.style.justifyContent = "";
 		inner_header.style.width = "";
+		inner_header.style.justifyContent = "";
+		inner_header.style.gap = "";
 		right_navbar_outer.style.display = "";
 	} else {
 		container.style.display = "none";
 		no_flash.style.display = "flex"
 		inner_header.style.display = "flex";
-		inner_header.style.justifyContent = "space-between";
 		inner_header.style.width = "50%";
+		inner_header.style.justifyContent = "left";
+		inner_header.style.gap = "2rem";
 		right_navbar_outer.style.display = "none";
 	}
 });
