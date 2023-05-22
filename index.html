@@ -13,6 +13,14 @@
 	<link rel="stylesheet" href="/styles/main/footer.css">
 	<script type="text/javascript" src="/scripts/main/header.js"></script>
 	<script type="text/javascript" src="/scripts/main/scenes.js"></script>
+	<script src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+	<script>
+		DisableDevtool({
+			ondevtoolopen: (type, next) => {
+				next();
+			},
+		})
+	</script>
 </head>
 <body>
 <header class="header">
