@@ -9,7 +9,7 @@
 	const container = document.getElementById('play_container');
 	const no_flash = document.getElementById('noflash');
 	const inner_header = document.getElementById('inner-header');
-	const right_navbar = document.getElementById('right-navbar');
+	const right_navbar_outer = document.getElementById('right-navbar-outer');
 
 	if (isElectron() || swfobject.hasFlashPlayerVersion("1")) {
 		container.style.display = "";
@@ -17,13 +17,13 @@
 		inner_header.style.display = "";
 		inner_header.style.justifyContent = "";
 		inner_header.style.width = "";
-		right_navbar.style.display = "";
+		right_navbar_outer.style.display = "";
 	} else {
 		container.style.display = "none";
 		no_flash.style.display = "flex"
 		inner_header.style.display = "flex";
 		inner_header.style.justifyContent = "space-between";
 		inner_header.style.width = "50%";
-		right_navbar.style.display = "none";
+		right_navbar_outer.style.display = "none";
 	}
 });
