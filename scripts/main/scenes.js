@@ -6,9 +6,6 @@
 
 	const randomIndex = Math.floor(Math.random() * scenes.length);
 	const randomScene = scenes[randomIndex];
-	console.log(scenes.length)
-	console.log(randomIndex)
-	console.log(randomScene)
 
 	document.getElementById("scene_container").innerHTML = `
 			<object width="100%" height="100%" data="../home_scenes/${randomScene}">

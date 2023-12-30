@@ -16,6 +16,7 @@ body {
 .header {
 	background-image: linear-gradient(rgb(0, 100, 175), rgb(0, 79, 143), rgb(0, 100, 175));
 	border-bottom: rgb(0, 44, 82) 4px solid;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	font-family: "Burbank Small Medium";
@@ -67,8 +68,8 @@ body {
 
 .navbar a:hover {
 	color: rgb(128, 227, 255);
-	border: rgb(8, 122, 204) 4px solid;
-	background: rgb(8, 122, 204, 20%);
+	border: rgb(0, 56, 112) 4px solid;
+	background: rgba(0, 78, 152, 0.3);
 }
 
 .rotating-text-div {

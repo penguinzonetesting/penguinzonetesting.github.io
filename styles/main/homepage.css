@@ -4,6 +4,22 @@
 }
 
 #scene_container {
-	height:475px;
-	width:100%;
+	height: 475px;
+	width: 100%;
+}
+
+#noflash {
+	display: none;
+	padding: 0;
+	margin: 0;
+	left: 0;
+	right: 0;
+}
+
+#noflashimg {
+	display: block;
+	position: absolute;
+	top: 9.94rem;
+	width: 100%;
+	height: auto;
 }
