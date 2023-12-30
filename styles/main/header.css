@@ -119,6 +119,8 @@ body {
 }
 
 .play:hover {
-	filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px -2px 0 white) drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white);
-	-webkit-filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px -2px 0 white) drop-shadow(-2px 2px 0 white) drop-shadow(2px -2px 0 white);
+	border-color: rgb(0, 34, 70);
+	background-image: linear-gradient(rgb(0, 125, 187), rgb(0, 74, 146), rgb(0, 125, 187));
+	filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px -2px 0 white) drop-shadow(-2px 4px 0 white) drop-shadow(4px -2px 0 white);
+	-webkit-filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px -2px 0 white) drop-shadow(-2px 4px 0 white) drop-shadow(4px -2px 0 white);
 }
