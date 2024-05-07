@@ -52,8 +52,8 @@ body {
 }
 
 .navbar > p {
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
 	text-shadow: 2px 2px 0 black;
 }
 
@@ -61,6 +61,7 @@ body {
 	padding: 1rem;
 	border-radius: 30px;
 	text-decoration: none;
+	white-space: nowrap;
 	color: white;
 	border: transparent 4px solid;
 	transition: color 0.4s, border 0.4s, background 0.4s;
@@ -111,6 +112,7 @@ body {
 	padding: 1rem 2rem;
 	color: white;
 	text-decoration: none;
+	white-space: nowrap;
 	font-family: "CCFaceFrontW00-Italic";
 	font-size: 1.5rem;
 	filter: drop-shadow(3px 3px 0 rgb(0, 209, 225));

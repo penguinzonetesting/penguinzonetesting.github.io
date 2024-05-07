@@ -5,29 +5,6 @@
 	height: 100vh;
 }
 
-#border_outer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-}
-
-#border {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: rgb(0, 44, 82) 10px solid;
-	box-sizing: border-box;
-	min-height: 828px;
-	max-height: 828px;
-	min-width: 1311px;
-	max-width: 1311px;
-	right: 50%;
-	z-index: 1;
-	pointer-events: none;
-}
-
 #penguin_zone {
 	display: flex;
 	justify-content: center;
